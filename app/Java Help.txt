@@ -1,0 +1,6 @@
+1. Eclipse Consol창 한글 깨짐 !
+
+	· Run -> Run Configurations -> Common 탭 선택 Console Encoding 항목에 Other옵션 EUC-KR 입력
+
+
+2. Java API - file:///C:/Java/jdk1.8/docs/api/index.html  OR  http://docs.oracle.com/javase/8/docs/api/

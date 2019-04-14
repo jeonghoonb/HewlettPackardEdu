@@ -1,0 +1,76 @@
+﻿1. AWT - Abstract Window Toolkit   => AWT를 확장시킨 것이 Swing
+
+	· Component : GUI Program을 구성하는 구성 요소
+
+	· Container : Component를 담는 그릇 (Container도 Component 중 하나이다.)
+		    : Container는 다른 Container를 포함할 수 있다.	
+		    - 종류 : Frame, window, Panel, Applet, Dialog, FileDialog, ScrollPane1 
+	
+	· Panel : Component들을 Group별로 묶어서 처리할 때 주로 사용한다.
+		: Frame에 Component를 직접 붙이지 않고 Panel에 Group별로 0붙이고, 그 Panel을 Frame에 붙인다.
+
+2. AWt & Swing API 보는 법
+
+	· 사용할 Componet 페이지로 이동
+	· 메서드로 이동 후 add~Listener() 확인
+	· ~와 동일한 Interface를 implements 한다. (또는 ~Adapter Class를 상속/내부익명으로 사용 가능) 
+	
+
+3. AWT & Swing 한글 깨짐
+
+	· Run -> Run Configurations -> Arguments -> VM Arguments 에 -Dfile.encoding=MS949 입력
+
+
+4. paint(), repaint(), update()
+	
+	· repaint() : AWT안에 구현되어있기 때문에 Frame을 상속받으면 바로 사용가능
+		    : update()를 자동 호출해서 Canvas를 지운 후 paint()를 호출하는 과정을 거친다.
+
+
+
+
+	· update() : repaint()메소드를 호출할때 자동호출됨
+
+
+
+	· paint() : 창의 최소화, 최대화 할때만 자동 호출됨
+
+
+
+	※즉, repaint(), update() 메소드는 repaint()를 호출할 때만 자동실행된다
+	  하지만, paint()는 화면이 가려졌다가 다시보여지게 될때만 실행된다
+
+
+5.
+	/*
+	 * Frame 창 위치 설정 메서드 : 모니터 가운데 출력
+	 */
+	public static void setFrameLocation() {
+		Dimension dFrame, dScreen;
+		int intyFrame, intxFrame, intyScreen, intxScreen;
+		Toolkit toolkit;
+		JFrame jFrame = new JFrame();
+		
+		toolkit = jFrame.getToolkit();
+		dScreen = toolkit.getScreenSize();
+		double doubleyScreen = dScreen.getHeight();
+		double doublexScreen = dScreen.getWidth();
+		intyScreen = (int) doubleyScreen;
+		intxScreen = (int) doublexScreen;
+		
+		dFrame = jFrame.getSize();
+		double doubleyFrame = dFrame.getHeight();
+		double doublexFrame = dFrame.getWidth();
+		intyFrame = (int) doubleyFrame;
+		intxFrame = (int) doublexFrame;
+		jFrame.setLocation(intxScreen / 2 - intxFrame / 2, intyScreen / 2 - intyFrame / 2);
+	}
+
+ 
+
+
+
+
+
+
+
