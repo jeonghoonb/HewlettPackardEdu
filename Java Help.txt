@@ -1,6 +1,6 @@
-1. Eclipse ConsolÃ¢ ÇÑ±Û ±úÁü !
+1. Eclipse Consolì°½ í•œê¸€ ê¹¨ì§ !
 
-	¡¤ Run -> Run Configurations -> Common ÅÇ ¼±ÅÃ Console Encoding Ç×¸ñ¿¡ Other¿É¼Ç EUC-KR ÀÔ·Â
+	Â· Run -> Run Configurations -> Common íƒ­ ì„ íƒ Console Encoding í•­ëª©ì— Otherì˜µì…˜ EUC-KR ì…ë ¥
 
 
 2. Java API - file:///C:/Java/jdk1.8/docs/api/index.html  OR  http://docs.oracle.com/javase/8/docs/api/
